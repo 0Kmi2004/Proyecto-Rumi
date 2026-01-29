@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmueble</title>
+</head>
+<form action='/actualizar/inmueble/{{cuenta.0}}' method="post">
+{%for inm in inmueble%}
+    Anfitrión<br>
+    <input type="text" name ="id" value="{{inm.0}}"><br><br>
+    Dirección Y Localidad<br>
+    <input type="text" name ="direccion" placeholder="{{inm.1}}"><br><br>
+    Descripción<br>
+    <input type="text" name ="descripcion" placeholder="{{inm.2}}"><br><br>
+    Cantidad de ambientes<br>
+    <input type="text" name="ambientes" placeholder="{{inm.3}}"><br><br>
+    Motivo de Hospedaje<br>
+    <input type="text" name ="motivo" placeholder="{{inm.4}}"><br><br>
+    Precio<br>
+    <input type="number" name ="precio" placeholder="{{inm.5}}"><br><br>
+    Gastos Extra<br>
+    <input type="text" name="gastos" placeholder="{{inm.6}}"><br><br>
+    Disposición<br>
+    <input type="text" name ="tiempo" placeholder="{{inm.7}}"><br><br>
+    Condiciones de Hospedaje<br>
+    <input type="text" name ="condiciones" placeholder="{{inm.8}}"><br><br>
+    Cantidad de huéspedes<br>
+    <input type="text" name="huespedes" placeholder="{{inm.9}}"><br><br>
+    <button type="submit">Registrar</button>
+{%endfor%}
+</form>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Roomie</title>
+</head>
+<form action='/roomie/{{cuenta.0}}' method="post">
+    <input type="text" name ="id" value="{{cuenta.0}}"><br><br>
+    <input type="text" name ="descripcion" placeholder="Descripción"><br><br>
+    <input type="text" name ="redes" placeholder="Redes Sociales"><br><br>
+    <input type="text" name="ocupacion" placeholder="Ocupación"><br><br>
+    <input type="text" name ="estudios" placeholder="Estudios"><br><br>
+    <input type="number" name ="presupuesto" placeholder="Presupuesto"><br><br>
+    <input type="text" name="lugartiempo" placeholder="Fechas y atributos del alojamiento pretendido"><br><br>
+    <input type="text" name ="condiciones" placeholder="Condiciones de convivencia"><br><br>
+    <input type="text" name ="idiomas" placeholder="Idiomas"><br><br>
+    <input type="text" name="hijos" placeholder="Hijos"><br><br>
+    <input type="text" name ="mascotas" placeholder="Mascotas"><br><br>
+    <input type="text" name ="situacion" placeholder="Situación"><br><br>
+    <input type="text" name="acompañante" placeholder="Acompañante"><br><br>
+    <button type="submit">Registrar</button>
+</form>
+<br><br>
+<a href="/perfil">siguiente</a>
+<br><br>
+<a href='/usuario'>anterior</a>
+</html>

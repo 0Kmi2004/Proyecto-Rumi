@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmueble</title>
+</head>
+<body><center>
+    <h1>Inmueble</h1>
+    <br>
+    <h2>Anfitrión: {{cuenta.1}} {{cuenta.2}}</h2>
+    <br><br>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Anfitrión</th>
+            <th>Ubicación</th>
+            <th>Descripción</th>
+            <th>Cantidad de Ambientes</th>
+            <th>Motivo de Hospedaje</th>
+            <th>Precio</th>
+            <th>Gastos Extra</th>
+            <th>Disposición</th>
+            <th>Condiciones de Hospedaje</th>
+            <th>Cantidad de huéspedes</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%for inm in inmueble%}
+        <tr>
+            <td>{{ inm[0] }}</td>
+            <td>{{ inm[1] }}</td>
+            <td>{{ inm[2] }}</td>
+            <td>{{ inm[3] }}</td>
+            <td>{{ inm[4] }}</td>
+            <td>{{ inm[5] }}</td>
+            <td>{{ inm[6] }}</td>
+            <td>{{ inm[7] }}</td>
+            <td>{{ inm[8] }}</td>
+            <td>{{ inm[9] }}</td>        
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+    <a href='/editar/inmueble/{{inm.0}}'>Editar Inmueble</a>
+    <br><br>
+    <a href="/eliminar/inmueble/{{inm.0}}">Eliminar Inmueble</a>
+    {%endfor%}
+    <br><br>
+    <a href="/inmueble">Listado Inmuebles</a>
+    <br><br>
+    <a href="/perfil">Listado Perfiles</a>
+    <br><br>
+    <a href="/buscar">Buscar</a>
+</center></body>
+</html>

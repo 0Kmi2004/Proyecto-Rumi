@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+</head>
+<body><center>
+    <h2>{{cuenta.1}} {{cuenta.2}}</h2>
+    <table>
+        <table border="1">
+            <thead>
+                <tr>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Mail</th>
+                <th>Teléfono</th>
+                <th>Fecha de nacimiento</th>
+                <th>Localidad</th>
+                <th>Genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ cuenta[0] }}</td>
+                    <td>{{ cuenta[1] }} {{ cuenta[2] }}</td>
+                    <td>{{ cuenta[3] }}</td>
+                    <td>{{ cuenta[5] }}</td>
+                    <td>{{ cuenta[6] }}</td>
+                    <td>{{ cuenta[7] }}</td>
+                    <td>{{ cuenta[9] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    {% for per in perfil %}
+        <h3>Descripción: <br>{{per[0]}}</h3>
+    <br><br>
+    Más sobre mí
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Ocupación</th>
+            <th>Estudios</th>
+            <th>Lugar y Tiempo</th>
+            <th>Redes Sociales</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+        <tr>
+            <td>{{ per[3] }}</td>
+            <td>{{ per[4] }}</td>
+            <td>{{ per[6] }}</td>
+            <td>{{ per[1] }}</td>
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+    Estilo de vida
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Hijos</th>
+            <th>Mascotas</th>
+            <th>Acompañante</th>
+            <th>Situación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ per[9] }}</td>
+            <td>{{ per[10] }}</td>
+            <td>{{ per[12] }}</td>
+            <td>{{ per[11] }}</td>
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+    Compatibilidad
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Presupuesto</th>
+            <th>Condiciones</th>
+            <th>Idiomas</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ per[5] }}</td>
+            <td>{{ per[7] }}</td>
+            <td>{{ per[8] }}</td>
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+    <a href='/editar/perfil/{{per.2}}'>Editar Perfil</a><br><br>
+    <a href="/eliminar/perfil/{{per.2}}">Eliminar Perfil</a>
+    {% endfor %}
+    <br><br>
+    <a href="/perfil">Listado Perfiles</a>
+    <br><br>
+    <a href="/inmueble">Listado Inmuebles</a>
+    <br><br>
+    <a href="/buscar">Buscar</a>
+</center></body>
+</html>

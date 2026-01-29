@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmueble</title>
+</head>
+<body><center>
+    <h1><center>Inmuebles</center></h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Anfitrión</th>
+            <th>Ubicación</th>
+            <th>Descripción</th>
+            <th>Cantidad de Ambientes</th>
+            <th>Motivo de Hospedaje</th>
+            <th>Precio</th>
+            <th>Gastos Extra</th>
+            <th>Disposición</th>
+            <th>Condiciones de Hospedaje</th>
+            <th>Cantidad de huéspedes</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%for inm in inmueble%}
+        <tr>
+            <td>{{ inm[0] }}</td>
+            <td>{{ inm[1] }}</td>
+            <td>{{ inm[2] }}</td>
+            <td>{{ inm[3] }}</td>
+            <td>{{ inm[4] }}</td>
+            <td>{{ inm[5] }}</td>
+            <td>{{ inm[6] }}</td>
+            <td>{{ inm[7] }}</td>
+            <td>{{ inm[8] }}</td>
+            <td>{{ inm[9] }}</td>
+            <td><a href="/verinmueble/{{inm.0}}">Ver Inmueble</a></td>
+            <td><a href='/verperfil/{{inm.0}}'>Perfil</a></td>
+        {%endfor%}
+        </tr>
+    </tbody>
+    </table>
+    <br><br>
+    <a href="/perfil">Perfiles</a>
+    <br><br>
+    <a href='/buscar'>Buscar</a>
+    <br><br>
+    <a href='/'>Volver a la página principal</a>
+</center></body>
+</html>

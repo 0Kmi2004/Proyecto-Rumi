@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+</head>
+<body><center>
+    <h1><center>Perfiles</center></h1>
+    
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Nombre de Usuario</th>
+            <th>Descripción</th>
+            <th>Redes Sociales</th>
+            <th>Ocupación</th>
+            <th>Estudios</th>
+            <th>Presupuesto</th>
+            <th>Lugar y Tiempo</th>
+            <th>Condición de convivencia</th>
+            <th>Idiomas</th>
+            <th>Hijos</th>
+            <th>Mascotas</th>
+            <th>Situación</th>
+            <th>Acompañante</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for perfil in perfiles %}
+        <tr>
+            <td>{{ perfil[2] }}</td>
+            <td>{{ perfil[0] }}</td>
+            <td>{{ perfil[1] }}</td>
+            <td>{{ perfil[3] }}</td>
+            <td>{{ perfil[4] }}</td>
+            <td>{{ perfil[5] }}</td>
+            <td>{{ perfil[6] }}</td>
+            <td>{{ perfil[7] }}</td>
+            <td>{{ perfil[8] }}</td>
+            <td>{{ perfil[9] }}</td>
+            <td>{{ perfil[10] }}</td>
+            <td>{{ perfil[11] }}</td>
+            <td>{{ perfil[12] }}</td>
+            <td><a href="/verperfil/{{perfil.2}}">Ver Perfil</a></td>
+            <td><a href="/registro/inmueble/{{perfil.2}}">Agregar Inmueble</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    <br><br>
+    <a href="/inmueble">Inmuebles</a>
+    <br><br>
+    <a href='/buscar'>Buscar</a>
+    <br><br>
+    <a href='/'>Volver a página principal</a>
+    
+</center></body>
+</html>

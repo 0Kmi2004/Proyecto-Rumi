@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Roomie</title>
+</head>
+<form action='/actualizar/perfil/{{cuenta.0}}' method="post">
+{%for roo in roomie%}
+    Nombre de Usuario<br>
+    <input type="text" name ="id" value="{{roo.2}}"><br><br>
+    Descricpción<br>
+    <input type="text" name ="descripcion" placeholder="{{roo.0}}"><br><br>
+    Redes Sociales<br>
+    <input type="text" name ="redes" placeholder="{{roo.1}}"><br><br>
+    Ocupación<br>
+    <input type="text" name="ocupacion" placeholder="{{roo.3}}"><br><br>
+    Estudios<br>
+    <input type="text" name ="estudios" placeholder="{{roo.4}}"><br><br>
+    Presupuesto<br>
+    <input type="number" name ="presupuesto" placeholder="{{roo.5}}"><br><br>
+    Lugar Y Tiempo<br>
+    <input type="text" name="lugartiempo" placeholder="{{roo.6}}"><br><br>
+    Condiciones<br>
+    <input type="text" name ="condiciones" placeholder="{{roo.7}}"><br><br>
+    Idiomas<br>
+    <input type="text" name ="idiomas" placeholder="{{roo.8}}"><br><br>
+    Hijos<br>
+    <input type="text" name="hijos" placeholder="{{roo.9}}"><br><br>
+    Mascotas<br>
+    <input type="text" name ="mascotas" placeholder="{{roo.10}}"><br><br>
+    Situación<br>
+    <input type="text" name ="situacion" placeholder="{{roo.11}}"><br><br>
+    Acompañante<br>
+    <input type="text" name="acompañante" placeholder="{{roo.12}}"><br><br>
+    <button type="submit">Registrar</button>
+{%endfor%}
+</form>
+</html>

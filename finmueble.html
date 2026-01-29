@@ -1,0 +1,43 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmueble</title>
+</head>
+<form action='/registro/inmueble/{{cuenta.0}}' method="post">
+    {%for cuen in cuenta%}    
+    <input type="text" name ="id" value="{{cuen.0}}"><br><br>
+    <input type="text" name ="direccion" placeholder="Dirección y Localidad"><br><br>
+    <input type="text" name ="descripcion" placeholder="Descripción"><br><br>
+    <select name="ambientes" title="N° de ambientes">
+        <option value=>N° de ambientes</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+    </select><br><br>   
+    <select name="motivo" title="Motivo">
+        <option value=>Motivo</option>
+        <option value="Residencial">Residencial</option>
+        <option value="Transitorio">Transitorio</option>
+        <option value="Vacacional">Vacacional</option>
+    </select><br><br>   
+    <input type="number" name ="precio" placeholder="Precio"><br><br>
+    <input type="number" name ="gastos" placeholder="Gastos Adicionales"><br><br>
+    <input type="text" name ="tiempo" placeholder="Duración del alojamiento"><br><br>
+    <input type="text" name ="condiciones" placeholder="Condiciones de alojamiento"><br><br>
+    <select name="huespedes" title="N° de huéspedes">>
+        <option value=>N° de huéspedes</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select><br><br>   
+    <button type="submit">Registrar</button>
+    {%endfor%}
+</form>
+<br><br>
+<a href='/inmueble'>siguiente</a>
+<br><br>
+<a href='/perfil'>anterior</a>
+</html>

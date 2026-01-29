@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar</title>
+</head>
+<body>
+    <form action="/buscar" method="post">
+        <input type="search" name="ingreso1" placeholder="Busque Roomies e Inmuebles">
+        <button type="submit">Buscar</button>
+    </form>
+
+
+        <h2>Roomies:</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>descripcion</th>
+                        <th>redes</th>
+                        <th>ocupacion</th>
+                        <th>estudios</th>
+                        <th>presupuesto</th>
+                        <th>lugartiempo</th>
+                        <th>condiciones</th>
+                        <th>idiomas</th>
+                        <th>hijos</th>
+                        <th>mascotas</th>
+                        <th>situacion</th>
+                        <th>acompañante</th>
+                        <th>nombre</th>
+                    </tr> 
+                </thead>
+                
+                <tbody>
+                    {% for columna in per %}  
+                    <tr>
+                        <td>{{ columna.2 }}</td>
+                        <td>{{ columna.0 }}</td>
+                        <td>{{ columna.1 }}</td>
+                        <td>{{ columna.3 }}</td>
+                        <td>{{ columna.4 }}</td>
+                        <td>{{ columna.5 }}</td>
+                        <td>{{ columna.6 }}</td>
+                        <td>{{ columna.7 }}</td>
+                        <td>{{ columna.8 }}</td>
+                        <td>{{ columna.9 }}</td>
+                        <td>{{ columna.10 }}</td>
+                        <td>{{ columna.11 }}</td>
+                        <td>{{ columna.12 }}</td>
+                        <td>{{ columna.13 }}</td>
+                        <td><a href="/verperfil/{{columna.2}}">Ver Perfil</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table><br>
+
+
+    {% if inm %}
+    <h2>Inmuebles:</h2>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>Localidad</th>
+            <th>descripcion</th>
+            <th>ambientes</th>
+            <th>motivo</th>
+            <th>precio</th>
+            <th>gastos</th>
+            <th>tiempo</th>
+            <th>condiciones</th>
+            <th>huespedes</th>
+            <th>nombre</th>
+        </tr>
+
+        {% for columna in inm %}
+        <tr>
+            <td>{{ columna[0] }}</td>
+            <td>{{ columna[1] }}</td>
+            <td>{{ columna[2] }}</td>
+            <td>{{ columna[3] }}</td>
+            <td>{{ columna[4] }}</td>
+            <td>{{ columna[5] }}</td>
+            <td>{{ columna[6] }}</td>
+            <td>{{ columna[7] }}</td>
+            <td>{{ columna[8] }}</td>
+            <td>{{ columna[9] }}</td>
+            <td>{{ columna[10] }}</td>
+            <td><a href="/verinmueble/{{columna.0}}">Ver Inmueble</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <!-- {% if cuen %}
+    <h2>Nombre y apellido:</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+
+        {% for columna in cuen %}
+        <tr>
+            <td>{{ columna[0] }}</td>
+            <td> {{ columna[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %} -->
+    <br><br>
+    <a href="/perfil">Listado de Perfiles</a>
+    <br><br>
+    <a href="/inmueble">Listado de Inmuebles</a>
+    <br><br>
+    <a href="/">Volver a la página principal</a>
+</body>
+</html>

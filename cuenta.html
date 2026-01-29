@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenta</title>
+</head>
+<body><center>
+    <h1>Cuentas</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Usuario</th>
+            <th>Nombre</th>
+            <th>Mail</th>
+            <th>Teléfono</th>
+            <th>Fecha de nacimiento</th>
+            <th>Localidad</th>
+            <th>Genero</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cuen in cuenta %}
+        <tr>
+            <td><a href="/editar/cuenta/{{cuen.0}}">Editar</a></td>
+            <td><a href="/eliminar/cuenta/{{cuen.0}}">Eliminar</a></td>
+            <td>{{ cuen[0] }}</td>
+            <td>{{ cuen[1] }} {{ cuen[2] }}</td>
+            <td>{{ cuen[3] }}</td>
+            <td>{{ cuen[5] }}</td>
+            <td>{{ cuen[6] }}</td>
+            <td>{{ cuen[7] }}</td>
+            <td>{{ cuen[9] }}</td>
+            <td><a href='/roomie/{{cuen.0}}'>Crear Perfil</a></td>
+            <td><a href='/registro/inmueble/{{cuen.0}}'>Anunciar Inmueble</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    <br><br>
+    <a href='/registro'>Registro</a>
+    <br><br>
+    <a href='/perfil'>Perfiles</a>
+    <br><br>
+    <a href='/inmueble'>Inmuebles</a>
+    <br><br>
+    <a href='/buscar'>Buscar</a>
+    <br><br>
+    <a href='/'>Volver a la página principal</a>
+</center></body>
+</html>
